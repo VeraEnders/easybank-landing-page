@@ -1,0 +1,13 @@
+{
+  "name": "easybank-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "style": "npx tailwindcss -i ./src/input.css -o ./style.css --watch"
+  },
+  "author": "VeraEnders",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
