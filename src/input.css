@@ -1,3 +1,140 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary-dark: hsl(233deg 26% 24% / 1);
+    --color-primary-accent-1: hsl(136deg 65% 51% / 1);
+    --color-primary-accent-2: hsl(192deg 70% 51% / 1);
+    --color-neutral: hsl(233deg 8% 62% / 1);
+    --color-white: hsl(0, 0%, 100%);
+  }
+
+  body {
+    color: var(--color-neutral);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-primary-dark);
+  }
+
+  h1 {
+    font-size: 2.375rem;
+    line-height: 2.813rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+}
+
+@layer components {
+  .button {
+    cursor: pointer;
+    display: inline-block;
+    background: linear-gradient(0deg, var(--color-primary-accent-1), var(--color-primary-accent-2));
+    color: var(--color-white);
+    border-radius: 1.5rem;
+    padding: 0.7rem 2.1rem;
+    font-size: 0.938rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .button:hover {
+    opacity: 0.8;
+  }
+
+  .hero__image {
+    background-image: url('./src/images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 18.5rem;
+    position: relative;
+  }
+
+  .hero__image::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('./src/images/image-mockups.png');
+    background-repeat: no-repeat;
+    background-size: 92%;
+    background-position: center bottom;
+  }
+
+  .feature img {
+    margin-inline: auto;
+  }
+
+  .feature h3 {
+    margin: 1.438rem 0 1.063rem;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .feature p {
+    font-size: 0.938rem;
+    line-height: 1.563rem;
+    letter-spacing: -0.02em;
+  }
+
+  .article {
+    background: var(--color-white);
+    border-radius: 0.4rem;
+  }
+
+  .article img {
+    border-radius: 0.4rem 0.4rem 0 0;
+    max-height: 12.5rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .article__content {
+    padding: 1.313rem 2.063rem 2.688rem;
+  }
+
+  .article__content h4 {
+    margin-block: 0.5rem;
+    line-height: 1.188rem;
+    letter-spacing: -0.02em;
+  }
+
+  .article__content span {
+    font-size: 0.625rem;
+  }
+
+  .article__content p {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    letter-spacing: -0.05em;
+  }
+  
+  footer {
+    letter-spacing: -0.05em;
+  }
+
+  .socials a {
+    display: inline-block;
+    margin-inline: 0.7rem;
+  }
+
+  footer nav li {
+    margin-top: 10px;
+  }
+}
+
+@layer utilities {
+  .container {
+    padding-inline: 1.35rem;
+    margin-inline: auto;
+  }
+}
